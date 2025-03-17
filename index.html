@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saras Analytics - Seamless Subscription Data Migration & Analytics for Recharge Brands</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(120deg, #2A93D5, #135D8F);
+        }
+        
+        .curved-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .curved-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 70px;
+        }
+
+        .curved-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+        .btn-primary {
+            background-color: #2A93D5;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #135D8F;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid #2A93D5;
+            color: #2A93D5;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(42, 147, 213, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-card {
+            border-left: 4px solid #2A93D5;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                padding-top: 2rem;
+                padding-bottom: 3rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-3 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">
+                Saras Analytics
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#why-migration" class="hover:text-blue-600 transition-colors">Why It Matters</a>
+                <a href="#how-we-solve" class="hover:text-blue-600 transition-colors">Our Solution</a>
+                <a href="#case-study" class="hover:text-blue-600 transition-colors">Case Study</a>
+                <a href="#saras-pulse" class="hover:text-blue-600 transition-colors">Saras Pulse</a>
+            </div>
+            <div>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition-colors">
+                    Book a Demo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white relative overflow-hidden">
+        <div class="container mx-auto px-4 py-16 md:py-24 hero-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fadeIn" style="animation-delay: 0.2s;">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+                        Seamless Subscription Data Migration & Analytics for Recharge Brands
+                    </h1>
+                    <p class="text-lg mb-8 opacity-90">
+                        Preserve historical insights, prevent data loss, and unlock real-time subscription analytics with Saras Analytics.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-opacity-90 transition-colors shadow-lg">
+                            Book a Demo
+                        </a>
+                        <a href="#data-audit" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:bg-opacity-10 transition-colors">
+                            Get a Free Data Audit
+                        </a>
+                    </div>
+                </div>
+                <div class="animate-fadeIn" style="animation-delay: 0.4s;">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-md shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard" class="rounded-lg shadow-lg w-full">
+                        <div class="mt-4 grid grid-cols-2 gap-4">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <h4 class="font-semibold">Pre-Migration</h4>
+                                <div class="w-full h-10 bg-red-500 bg-opacity-30 rounded-md mt-2"></div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 p-3 rounded-lg">
+                                <h4 class="font-semibold">Post-Migration</h4>
+                                <div class="w-full h-10 bg-green-500 bg-opacity-50 rounded-md mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="curved-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Why Data Migration Matters -->
+    <section id="why-migration" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Why Data Migration Matters</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-blue-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-red-500 text-4xl mb-4">
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Broken LTV & Churn Metrics</h3>
+                    <p class="text-gray-700">
+                        Poor data migration leads to inaccurate customer lifetime value calculations and unreliable churn tracking.
+                    </p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-yellow-500 text-4xl mb-4">
+                        <i class="bi bi-shield-exclamation"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Retention Cohorts Breaking</h3>
+                    <p class="text-gray-700">
+                        Historical retention cohorts become disconnected, making it impossible to track true customer loyalty patterns.
+                    </p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Incorrect Revenue Tracking</h3>
+                    <p class="text-gray-700">
+                        Reporting gaps and incorrect revenue tracking create blind spots in financial forecasting and performance.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-blue-600 text-white p-6 md:p-8 rounded-xl shadow-lg mx-auto max-w-3xl">
+                <div class="flex items-start">
+                    <div class="text-yellow-300 text-3xl mr-4 mt-1">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">The Real Problem</h3>
+                        <p class="text-white text-opacity-90 text-lg">
+                            "Merchants lose 1-2 years of historical data when switching from platforms like Upscribe to Recharge."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Before vs After Section -->
+            <div class="mt-20">
+                <h2 class="text-2xl font-bold text-center mb-12">Major Consequences of Poor Data Stitching</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Bad Data -->
+                    <div class="border border-red-200 rounded-xl p-6 bg-red-50">
+                        <h3 class="text-xl font-bold mb-6 text-red-600 flex items-center">
+                            <i class="bi bi-x-circle-fill mr-2"></i> Before: Bad Data
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="text-red-500 mr-3">❌</div>
+                                <p>Fragmented customer journey</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-red-500 mr-3">❌</div>
+                                <p>Inaccurate subscription metrics</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-red-500 mr-3">❌</div>
+                                <p>Missing historical data</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-red-500 mr-3">❌</div>
+                                <p>Poor forecasting ability</p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-red-500 mr-3">❌</div>
+                                <p>Unclear retention trends</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Good Data -->
+                    <div class="border border-green-200 rounded-xl p-6 bg-green-50">
+                        <h3 class="text-xl font-bold mb-6 text-green-600 flex items-center">
+                            <i class="bi bi-check-circle-fill mr-2"></i> After: Good Data
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="text-green-500 mr-3">✅</div>
+                                <p><strong>Accurate LTV & Churn Metrics</strong></p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-green-500 mr-3">✅</div>
+                                <p><strong>Cohesive Subscription Dashboards</strong></p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-green-500 mr-3">✅</div>
+                                <p><strong>Preserved Retention Trends</strong></p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-green-500 mr-3">✅</div>
+                                <p><strong>Data-driven decision making</strong></p>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="text-green-500is mr-3">✅</div>
+                                <p><strong>Complete historical visibility</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-600 text-white rounded-xl p-6 flex items-center">
+                        <div class="text-4xl text-blue-200 mr-4">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">50%</h3>
+                            <p>Brands report a 50% increase in subscription take-rate post-migration with Saras</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-600 text-white rounded-xl p-6 flex items-center">
+                        <div class="text-4xl text-blue-200 mr-4">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-1">100%</h3>
+                            <p>Complete data retention & zero reporting gaps</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Saras Analytics Solves These Problems -->
+    <section id="how-we-solve" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How Saras Analytics Solves These Problems</h2>
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-16">Our structured approach ensures a seamless transition with no data loss</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="step-card bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">1</div>
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="bi bi-database-fill"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Extract Data</h3>
+                    <p class="text-gray-700">
+                        Get complete historical records from Recharge & legacy platforms.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step-card bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">2</div>
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Transform & Stitch</h3>
+                    <p class="text-gray-700">
+                        Ensure structured, clean data alignment across all platforms.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step-card bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">3</div>
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="bi bi-shield-lock-fill"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Preserve Key Fields</h3>
+                    <p class="text-gray-700">
+                        Maintain LTV, churn history, subscription IDs, and other critical metrics.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="step-card bg-white rounded-xl shadow-sm p-6 relative">
+                    <div class="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">4</div>
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Actionable Dashboards</h3>
+                    <p class="text-gray-700">
+                        Gain uninterrupted reporting & insights for data-driven decisions.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Key Value Props -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center mb-8">Our Promise</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                        <div class="text-orange-500 text-3xl mb-4">
+                            <i class="bi bi-fire"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Zero Data Loss</h4>
+                        <p class="text-gray-600">
+                            Every subscription, every customer, and every transaction preserved.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                        <div class="text-orange-500 text-3xl mb-4">
+                            <i class="bi bi-fire"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">100% Reporting Accuracy</h4>
+                        <p class="text-gray-600">
+                            Precision matters. Every metric reconciled and verified.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                        <div class="text-orange-500 text-3xl mb-4">
+                            <i class="bi bi-fire"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Faster Growth Insights</h4>
+                        <p class="text-gray-600">
+                            Make better decisions with complete retention and growth insights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section id="case-study" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Case Study: Wellness Coffee Brand</h2>
+            
+            <div class="bg-blue-50 rounded-2xl p-8 md:p-10 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Before Saras -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-red-600">Before Saras</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-3 mt-1">❌</div>
+                                <p><strong>Lost 1-2 years</strong> of valuable customer data during platform migration</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-3 mt-1">❌</div>
+                                <p><strong>Broken retention & cancellation insights</strong> making forecasting impossible</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-3 mt-1">❌</div>
+                                <p><strong>Incorrect LTV & revenue tracking</strong> leading to poor strategic decisions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- With Saras Solution -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-green-600">Saras Solution</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-green-500 mr-3 mt-1">✔️</div>
+                                <p><strong>Full historical data restoration</strong> with clean, normalized metrics</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-green-500 mr-3 mt-1">✔️</div>
+                                <p><strong>Cohesive analytics</strong> for better forecasting and decision-making</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-green-500 mr-3 mt-1">✔️</div>
+                                <p><strong>50% increase</strong> in subscription take-rate in just one month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial -->
+                <div class="mt-10 bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-start">
+                        <div class="text-blue-500 text-4xl mr-4">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div>
+                            <p class="italic text-gray-700 mb-4">
+                                "Switching platforms was a nightmare until we found Saras. They recovered our lost data and gave us insights we never had before. Our subscription business grew 50% in the first month after migration."
+                            </p>
+                            <p class="font-semibold">Sarah Johnson, CEO - Wellness Coffee Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saras Pulse -->
+    <section id="saras-pulse" class="py-16 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Saras Pulse: The Ultimate Subscription Dashboard</h2>
+                <p class="text-gray-600">
+                    Complete visibility into your subscription business with actionable metrics and insights.
+                </p>
+            </div>
+            
+            <!-- Dashboard Preview -->
+            <div class="rounded-2xl overflow-hidden shadow-xl mb-16 max-w-5xl mx-auto">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" alt="Saras Pulse Dashboard" class="w-full">
+            </div>
+            
+            <!-- Core Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="bi bi-bar-chart-line-fill"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Real-time Insights</h3>
+                    <p class="text-gray-600">
+                        Live subscription metrics for Recharge brands with actionable intelligence.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Multi-Channel Visibility</h3>
+                    <p class="text-gray-600">
+                        Shopify + Amazon + other channels consolidated in one powerful dashboard.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="bi bi-file-earmark-bar-graph"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Customizable Reports</h3>
+                    <p class="text-gray-600">
+                        Create perfect reports for investors & decision-makers in just a few clicks.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+                    See Saras Pulse in Action – Book a Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="gradient-bg py-16 md:py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Make Your Subscription Data Work for You?</h2>
+            <p class="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
+                Get complete visibility, accurate metrics, and actionable insights for your subscription business.
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                <a href="#data-audit" id="data-audit" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg flex items-center justify-center">
+                    <i class="bi bi-clipboard-check mr-2"></i> Get a Free Data Audit
+                </a>
+                <a href="#schedule-call" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-colors flex items-center justify-center">
+                    <i class="bi bi-calendar-check mr-2"></i> Schedule a Call
+                </a>
+            </div>
+            
+            <!-- Partner Logos -->
+            <div>
+                <p class="text-sm uppercase tracking-wider mb-6 opacity-80">Trusted by Leading Brands</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                        <div class="h-12 bg-white bg-opacity-90 rounded flex items-center justify-center text-blue-900 font-bold">BRAND ONE</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                        <div class="h-12 bg-white bg-opacity-90 rounded flex items-center justify-center text-blue-900 font-bold">BRAND TWO</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                        <div class="h-12 bg-white bg-opacity-90 rounded flex items-center justify-center text-blue-900 font-bold">BRAND THREE</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 rounded-lg p-4 backdrop-filter backdrop-blur-sm">
+                        <div class="h-12 bg-white bg-opacity-90 rounded flex items-center justify-center text-blue-900 font-bold">BRAND FOUR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Saras Analytics</h3>
+                    <p class="text-gray-400">
+                        Helping subscription brands preserve data and gain actionable insights.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Data Migration</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Subscription Analytics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Retention Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="bi bi-facebook text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-500 text-center">
+                <p>&copy; 2023 Saras Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Data Audit -->
+    <div id="dataAuditModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl p-6 max-w-md w-full">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Get Your Free Data Audit</h3>
+                <button id="closeDataAuditModal" class="text-gray-500 hover:text-gray-700">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <form id="dataAuditForm">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-1">Name</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Email</label>
+                        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">Company</label>
+                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-1">What platform are you using?</label>
+                        <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Recharge</option>
+                            <option>Upscribe</option>
+                            <option>Bold</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition-colors">
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    if(this.getAttribute('href') === '#data-audit') {
+                        document.getElementById('dataAuditModal').classList.remove('hidden');
+                        return;
+                    }
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Data Audit Modal
+            const dataAuditModal = document.getElementById('dataAuditModal');
+            const closeDataAuditModal = document.getElementById('closeDataAuditModal');
+            
+            closeDataAuditModal.addEventListener('click', function() {
+                dataAuditModal.classList.add('hidden');
+            });
+            
+            // Close modal if clicked outside
+            window.addEventListener('click', function(e) {
+                if (e.target === dataAuditModal) {
+                    dataAuditModal.classList.add('hidden');
+                }
+            });
+            
+            // Form submission
+            const dataAuditForm = document.getElementById('dataAuditForm');
+            dataAuditForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.textContent = 'Submitting...';
+                
+                setTimeout(() => {
+                    dataAuditModal.innerHTML = `
+                        <div class="bg-white rounded-xl p-6 max-w-md w-full text-center">
+                            <div class="text-green-500 text-5xl mb-4">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Thank You!</h3>
+                            <p class="mb-6">We've received your request for a data audit. Our team will contact you within 24 hours to get started.</p>
+                            <button id="closeThankYouModal" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors">
+                                Close
+                            </button>
+                        </div>
+                    `;
+                    
+                    document.getElementById('closeThankYouModal').addEventListener('click', function() {
+                        dataAuditModal.classList.add('hidden');
+                    });
+                }, 1500);
+            });
+            
+            // Animation on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeIn');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('section > div > *').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
